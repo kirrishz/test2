@@ -242,15 +242,68 @@ System.out.println("\t"+"  RollNo: 381,356,362 ");
 					catch(Exception e){
 						System.out.println("You have entered wrong Index number.please check");
 					}
-					break;			
-              
-			  
-				
-	
+					break;
+
+
+			  case 3:
+				  System.out.println("What do you want to see?" );
+
+				  System.out.println("1.Main garage\n2.Waiting list");
+				  int displayNum=in.nextInt();
+				  try{
+					  switch(displayNum){
+						  case 1:
+							  vehicle carID1=null;
+							  int carList1=0;
+
+							  for(int h=0;h<list1.size();h++){
+								  carID1=list1.get(h);
+								  carList1=carID1.no;
+								  System.out.println("Park now "+carList1);
+							  }
+							  break;
+						  case 2:
+							  vehicle carID2=null;
+							  int carList2=0;
+
+							  for(int h1=0;h1<list2.size();h1++){
+								  carID2=list2.get(h1);
+								  carList2=carID2.no;
+								  System.out.println(carList2+" is in the Waiting list now");
+
+							  }break;
+						  //default: System.exit(0);
+					  }
+				  }
+				  catch(Exception e){
+					  System.out.println("You have enter wrong option number.please check again");
+				  }
+				  break;
+
+
+			  case 4:
+				  System.out.println("Have a nice day");
+
+
+			  default: System.exit(0);
 
 
 
-  }         
+
+
+
+		  }// switch
+
+		}
+	}
+	catch(Exception e){
+		System.out.println(e+"You may have entered a wrong charactor.please check");
+	}
+
+
+
+
+}
     
 }
 
